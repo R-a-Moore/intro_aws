@@ -1,5 +1,7 @@
 # Cloud Computing with AWS
 
+![Cloud Deployment](https://user-images.githubusercontent.com/47668244/185410403-d6784a4f-d98e-4bf4-ba29-39958cb70077.png)
+
 ### Shopping - What Requirements do we look for when buying a machine?
 
 - cpu
