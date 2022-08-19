@@ -1,5 +1,7 @@
 # Cloud Computing
 
+![page 1](https://user-images.githubusercontent.com/47668244/185719157-2303a7e1-12e1-4891-9417-f4662fb34e39.png)
+
 ## Introduction
 
 -	Cloud computing
@@ -8,6 +10,8 @@
 -	AWS – global infrastructure
 
 ## What is Cloud Computing?
+
+![page 2](https://user-images.githubusercontent.com/47668244/185719166-57311c6e-1478-4f0a-b0e4-bcc45cc973fc.png)
 
 Let’s say you are a organisation looking to create a production environment for the software application that your team has developed. 
 For this production environment, you want to be able to have:
@@ -18,6 +22,8 @@ For this production environment, you want to be able to have:
 -	Scalability; you might want to later expand the use of this production environment to account for expanded versions of the application.
 
 ### Definition
+
+![page 3](https://user-images.githubusercontent.com/47668244/185719178-eee943db-4c4c-4a70-86a4-580a2706733b.png)
 
 Cloud computing refers to the delivery of on demand computing services, which provides a pay as you go structure.
 In practice, this means that all of the computing infrastructure (hardware), processes, and applications are not located on site, but in an off-site environment dedicated to the delivery of those requirements.
@@ -31,6 +37,8 @@ Cloud computing has three methods of deployment
 
 ## Pros
 
+![page 4](https://user-images.githubusercontent.com/47668244/185719193-e3300680-312c-4e1f-8e00-f8e3bd3e4170.png)
+
 Cloud computing provides a number of advantages to an organisation
 -	Scalability – it is far easier and often cheaper to scale up your instances and number of environments via cloud computing. 
 -	No technical maintenance and management concerns (both technical and security)
@@ -38,6 +46,8 @@ Cloud computing provides a number of advantages to an organisation
 -	robust disaster recovery systems – if your organisation does not have the redundant infrastructure and procedures to account for, and recover from disasters; be they natural, corporate, or security, cloud computing already provides that. In redundant machines, backup storage, and off-site separation as mentioned previously.
 
 ## Cons
+
+![page 5](https://user-images.githubusercontent.com/47668244/185719200-9a4dffb8-6e36-4da5-b08a-93cf96cc49ce.png)
 
 When going into cloud computing there are a number of key things to consider
 -	resource dependencies – whilst you no longer have to worry about the maintenance and management of the infrastructure as you have handed it off to the cloud provider, this also means you no longer hold control over it. And as such, if the provider does not meat your requirements or you outgrow their capabilities, you will potentially have to change providers. 
@@ -47,12 +57,16 @@ When going into cloud computing there are a number of key things to consider
 
 ## Service Models
 
+![page 6](https://user-images.githubusercontent.com/47668244/185719205-59a2e522-1c52-4c2b-be56-831c50e002bd.png)
+
 -	IaaS (Infrastructure as a Service) – where only the hardware such as machine instances, networks, processes and storage is provisioned. Such level services require you as the organisation to decide and implement the operating system, instance firewalls and the higher-level applications and software to run on the machine. 
 -	PaaS (Platform as a Service) – is where the hardware requirements are fulfilled, and the applications meant to provide facilities for tasks such as software development.
 -	SaaS (Software as a Service) – where the entire machine has been provisioned with hardware, OS, applications and other peripherals such that you can begin working on it 
 
 
 # Cloud Computing with AWS
+
+![aws](https://yt3.ggpht.com/ytc/AMLnZu-TeqYTUHtz5NM4fN0RbWTETgl4L-HHzTWV5X7nAnU=s900-c-k-c0x00ffffff-no-rj)
 
 ### Shopping - What Requirements do we look for when buying a machine?
 
@@ -70,6 +84,8 @@ When making/buying a machine you have to decide upon the specification, the cost
 When going onto the cloud, you negate all of the specific machine issues
 
 ## EC2
+
+![ec2](https://sawadeeeen.com/wp-content/uploads/2020/09/EC2.jpg)
 
 ![EC2 instance on AWS](https://user-images.githubusercontent.com/47668244/185410403-d6784a4f-d98e-4bf4-ba29-39958cb70077.png)
 
