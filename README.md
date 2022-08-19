@@ -88,4 +88,6 @@ Secure Copy (SCP)
 
 `-r` for when the file you're copying isn't in the same directory that your currently in
 
-`scp -i "ssh key"" -r "your file" "destination host":`
+`scp -i "ssh key"" -r "your file" "destination host":"destination directory"`
+
+for example: `scp -i eng122.pem -r C:\Users\Raphael\GitHub\week4\intro_aws\app ~/ubuntu@ec2-18-203-172-115.eu-west-1.compute.amazonaws.com:`
