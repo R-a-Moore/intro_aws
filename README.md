@@ -17,6 +17,8 @@ When going onto the cloud, you negate all of the specific machine issues
 
 ## EC2
 
+![EC2 instance on AWS](https://user-images.githubusercontent.com/47668244/185410403-d6784a4f-d98e-4bf4-ba29-39958cb70077.png)
+
 EC2 (elastic comput service) the machine we'd like to build based on our requirements to deploy on the cloud.
 
 --> personal use - official use - gaming
