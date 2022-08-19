@@ -9,9 +9,9 @@ sudo apt-get purge nodejs npm -y
 curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
   
 sudo apt-get install -y nodejs npm
-
-echo "DB_HOST=mongodb://192.168.10.150:27017/posts" | sudo tee -a /etc/environment
-  
+# stores an environment variable 
+# echo "DB_HOST=mongodb://192.168.10.150:27017/posts" | sudo tee -a /etc/environment
+# uncomment this line once the db is available and replace the this ip with the instance db ip
 cd app
 
 cd app
