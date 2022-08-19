@@ -1,3 +1,5 @@
+![aws](https://d1nzzttg89jj6.cloudfront.net/assets/articles/1575354413/klarna-signs-deal-with-aws-1575354413.png)
+
 # Cloud Computing with AWS
 
 ### Shopping - What Requirements do we look for when buying a machine?
@@ -16,6 +18,8 @@ When making/buying a machine you have to decide upon the specification, the cost
 When going onto the cloud, you negate all of the specific machine issues
 
 ## EC2
+
+![ec2](https://miro.medium.com/max/750/1*q6F0j8HFHd8jeYXyQBqrCQ.jpeg)
 
 ![EC2 instance on AWS](https://user-images.githubusercontent.com/47668244/185410403-d6784a4f-d98e-4bf4-ba29-39958cb70077.png)
 
