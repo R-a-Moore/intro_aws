@@ -68,6 +68,10 @@ When going into cloud computing there are a number of key things to consider
 
 ![aws](https://yt3.ggpht.com/ytc/AMLnZu-TeqYTUHtz5NM4fN0RbWTETgl4L-HHzTWV5X7nAnU=s900-c-k-c0x00ffffff-no-rj)
 
+Amazon Web Services (AWS), is the world's largest cloud computing service provider. Servicing over 200 fully featured services, which make up 67% of the world's cloud infrastructure.
+
+AWS global infrastructure operates in 84 availability zones. And services millions of active customers, covering virtually every industry and enterprise - both public and private secotrs.
+
 ### Shopping - What Requirements do we look for when buying a machine?
 
 - cpu
@@ -87,11 +91,13 @@ When going onto the cloud, you negate all of the specific machine issues
 
 ![ec2](https://sawadeeeen.com/wp-content/uploads/2020/09/EC2.jpg)
 
+EC2 (elastic comput service) is one of AWS' services, which allows customers to rent virtual computers on which to operate their own applications. 
+
+EC2 is the platform what we will use to make the machine we'd like to build based on our requirements to deploy on the cloud.
+
 ![EC2 instance on AWS](https://user-images.githubusercontent.com/47668244/185410403-d6784a4f-d98e-4bf4-ba29-39958cb70077.png)
 
-EC2 (elastic comput service) the machine we'd like to build based on our requirements to deploy on the cloud.
-
---> personal use - official use - gaming
+Similar to our virtual machines we will build our machines with EC2 on AWS, using a very similar process. However, we will of course be setting it up outside our localhosts, needing to connect to the machine with an SSH key connection.
 
 ### Conventions & Practices
 
