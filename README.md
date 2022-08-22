@@ -220,3 +220,6 @@ if we create an image of an original instance, and reupload it when we want to u
 It also takes less time to duplicate the image and load it into multiple instances, as opposed to creating instances from scratch, if we want to duplicate a single instance.
 
 From the AWS site marketplace, you can also purchase images. Using an already set up image of an instance, means that you save time having to set up a machine.
+
+![Cloud Deployment - AMI](https://user-images.githubusercontent.com/47668244/185961595-dcefa971-415a-4f68-9892-510ea5d03ef5.png)
+
