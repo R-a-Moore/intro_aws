@@ -211,3 +211,12 @@ If you want to provision the instance with a specific script, you can do this, e
 `#!bin/bash` first line of user data
 
 To do it by file you must tick the box and enter the appropriate file path.
+
+# AMI
+Amazon Machine Image
+
+if we create an image of an original instance, and reupload it when we want to use it again, then it would be cheaper to store it than to keep and maintain that machine instance (even if in hibernation), since storing it on AWS costs.
+
+It also takes less time to duplicate the image and load it into multiple instances, as opposed to creating instances from scratch, if we want to duplicate a single instance.
+
+From the AWS site marketplace, you can also purchase images. Using an already set up image of an instance, means that you save time having to set up a machine.
