@@ -21,6 +21,8 @@ For this production environment, you want to be able to have:
 -	Instance access
 -	Scalability; you might want to later expand the use of this production environment to account for expanded versions of the application.
 
+However, before committing to just using virtual environments configured on localhosts, you may want to consider other options.
+
 ### Definition
 
 ![page 3](https://user-images.githubusercontent.com/47668244/185719178-eee943db-4c4c-4a70-86a4-580a2706733b.png)
@@ -198,6 +200,10 @@ working on port 3000
 
 Now that we've set up our app instance machine, just like in virtualisation, we want to set up a database machine.
 
-To do this we will follow the same steps, creating an EC2 instance, with the appropriate operating system, type, volume, 
+To do this we will follow the same steps, creating an EC2 instance, with the appropriate operating system, type, volume, etc.
+
+However when constructing the security group we need to ensure that not only can we connect to the instance with our localhost using SSH, but we also need to ensure that our app machine can connect to the db machine using a custom TCP rule which operates on port 27017 and allows the IP of our app machine only (though we could make it allow all IP, if we aren't worried about letting anyone on).
+
+With that we can finish setting up the instance as usual...
 
 
