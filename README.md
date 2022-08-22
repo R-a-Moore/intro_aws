@@ -74,6 +74,8 @@ Amazon Web Services (AWS), is the world's largest cloud computing service provid
 
 AWS global infrastructure operates in 84 availability zones. And services millions of active customers, covering virtually every industry and enterprise - both public and private secotrs.
 
+Availability zones (AZ) are the non-physical name locations for the many places which machine instances can be rented. They are based off of regions, actual physical locations, and so this is why you may find 'Ireland 1a' as there are 3 availability zones in Ireland.
+
 ### Shopping - What Requirements do we look for when buying a machine?
 
 - cpu
@@ -112,6 +114,18 @@ Similar to our virtual machines we will build our machines with EC2 on AWS, usin
 - Do not delete anyone else's services
 
 - DO NOT share AWS account details or keys with anyone - so don't push them to github!!!
+
+#### Four Pillars of Cloud Deployment
+
+When considering cloud instances, and especially during decision making processes such as which availability zone to opperate in, there are four pillars which are key to consider for this process:
+
+- *ease of use*; deployment should not occur in a manner that is not easily reproducable, or usable. 
+
+- *flexibility*; we should be able to access and modify our instances in different ways, and allow for change.
+
+- *cost*; we should not incurr unnecissary costs (including timewise), onto the process and for the organisation.
+
+- *robustness*; prior, during and after change or activity has occured, we do not want vulnerabilites in security or functionality of our goals to be apparent.
 
 #### Security groups
 
@@ -152,30 +166,13 @@ got to EC2 instance connect - copy ip
 
 ![get instance ip](https://user-images.githubusercontent.com/47668244/185581003-1ca1a982-8b4a-4a87-b7aa-92bb39aa932c.png)
 
-install nodejs 
-
-migrate data
-
-navigate to app folder
-
-edit security group to add another rule to allow port 3000 to all
-
-npm start
-
-configure reverse proxy
-
-HINT: scp to migrate data from localhost to ec2 rsync also works
-
-create documentation of everything we have done since morning
-
-
 ### Migrating Files
-Secure Copy (SCP) command.
+
+Secure Copy (SCP) command is a command used to migrate data to and from instances or directories in the terminal; `scp -i "ssh key"" -r "your file" "destination host":"destination directory"`
+
 `-i` identify
 
 `-r` for when the file you're copying isn't in the same directory that your currently in
-
-`scp -i "ssh key"" -r "your file" "destination host":"destination directory"`
 
 for example: `scp -i eng122.pem -r C:\Users\Raphael\GitHub\week4\intro_aws\app ~/ubuntu@ec2-18-203-172-115.eu-west-1.compute.amazonaws.com:`
 
@@ -206,4 +203,11 @@ However when constructing the security group we need to ensure that not only can
 
 With that we can finish setting up the instance as usual...
 
+## Instance provisioning
 
+If you want to provision the instance with a specific script, you can do this, either by text or by file:
+
+- configure instance details -> advanced
+`#!bin/bash` first line of user data
+
+To do it by file you must tick the box and enter the appropriate file path.
