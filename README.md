@@ -223,3 +223,12 @@ From the AWS site marketplace, you can also purchase images. Using an already se
 
 ![Cloud Deployment - AMI](https://user-images.githubusercontent.com/47668244/185961595-dcefa971-415a-4f68-9892-510ea5d03ef5.png)
 
+### Steps to Imaging
+
+instances --> select instance --> actions --> images and templates --> create image
+
+fill in details, then click Create Image to finish
+
+you can then find your image in the Images --> AMIs tab in AWS
+
+To start up your image, click Launch Image as Instance, and then follow through the steps as if you were launching a normal instnace.
