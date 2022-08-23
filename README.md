@@ -156,7 +156,7 @@ Ubuntu Server 18.04 LTS (HVM), SSD Volume Type
 
 - instances
 
-- select -> connect -> SSH connection; copy bottom SSH command `` paste it into the terminal, ensuring you are in your .ssh directory where your key pair that you've selected for that machine is stored.
+- select -> connect -> SSH client; copy bottom SSH command `` paste it into the terminal, ensuring you are in your .ssh directory where your key pair that you've selected for that machine is stored.
 
 One issue that can arise with the ssh command is sometimes it brings up a root error. This is where your ssh command is using root instead of ubuntu (or whatever relevant os you're using). Replace the first with the second.
 
@@ -217,7 +217,7 @@ If you want to provision the instance with a specific script, you can do this, e
 To do it by file you must tick the box and enter the appropriate file path.
 
 ### Getting files
-You can git clone (this isn't secure);
+You can git clone (this isn't secure), here's an example for our app machine;
 ```
 #!bin/bash
 
@@ -272,5 +272,41 @@ fill in details, then click Create Image to finish
 you can then find your image in the Images --> AMIs tab in AWS
 
 To start up your image, click Launch Image as Instance, and then follow through the steps as if you were launching a normal instnace.
+
+# Disaster Recovery Plan (DR)
+
+Accounting for any unexpected, unforseen scenarios, so that service is still delivered to the user.
+
+Ensures deployment is:
+- highly available
+- scalable
+- robustness
+in case of any unexpected disaster - AMI - back up - eu-west-1 Ireland
+multi AZs eu-west-1a, 1b, 1c
+multi region Ireland as well as in London
+what if AWS goes down??? - multi cloud deployment AWS as well as Azure or GCP
+
+By law in the UK fintech (financial technology), MUST be have multi cloud deployment.
+
+Hybrid cloud - localhost infrastructure can be built + public cloud infrastructure.
+
+for our hybrid cloud scenario, when working on disaster recovery, you will need to create backups and hard safes for the localhost infrastructure, 
+
+S3 (simple storage service):
+- highly flexible
+- cost effective
+- highly available (it's a global service)
+- durable (because it's highly available, it's a globally available service)
+- cost effective (no limits to data amount)
+
+S3 is used as a data back-up. We need data accessible 24/7. If we store data to it from our localhost or our AMI/EC2, we should be able to access it whenever we like.
+
+we cannot use our ssh key connection to connect to an S3 bucket, we need aws secret & access keys.
+
+Pre-Requisites:
+- localhost and EC2 instance must be the same OS, so you need AWSCLI
+- aws configuration to secure
+the aws keys
+we python3.7 or above pip3
 
 
