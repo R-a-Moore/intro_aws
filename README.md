@@ -131,6 +131,8 @@ When considering cloud instances, and especially during decision making processe
 
 when administrating security groups, you should name your security group relevant to it's role and your instance machine.
 
+You can even use different security groups into a security group rule. So for example; you are building a machine that wants to allow another specific machine to connect to it. However this second machine's IP changes constantly, so it would be unreasonable to constantly go in and change the Ip that's assigned to the first machine's security. What you can do instead to solve this, is set the security group of the first machine to accept the second machine's security group. This means our first machine will allow whatever machine is using the second machine's security group to connect to it, and we don't have to worry about dynamically assigned IPs.
+
 ## Set Up
 
 when selecting operating system (in this case) choose
@@ -154,7 +156,9 @@ Ubuntu Server 18.04 LTS (HVM), SSD Volume Type
 
 - instances
 
-- select - connect
+- select -> connect -> SSH connection; copy bottom SSH command `` paste it into the terminal, ensuring you are in your .ssh directory where your key pair that you've selected for that machine is stored.
+
+One issue that can arise with the ssh command is sometimes it brings up a root error. This is where your ssh command is using root instead of ubuntu (or whatever relevant os you're using). Replace the first with the second.
 
 ![get instance ssh connection command](https://user-images.githubusercontent.com/47668244/185580918-455a8a98-3e13-425f-aeee-8bc24dc2c39a.png)
 
@@ -212,7 +216,41 @@ If you want to provision the instance with a specific script, you can do this, e
 
 To do it by file you must tick the box and enter the appropriate file path.
 
+### Getting files
+You can git clone (this isn't secure);
+```
+#!bin/bash
+
+sudo apt-get update -y
+
+sudo apt-get upgrade -y
+
+sudo apt-get install nginx -y
+
+sudo systemctl restart nginx
+
+sydo systemctl enable nginx
+
+git clone https://github.com/R-a-Moore/intro_aws.git
+
+cd intro_aws
+
+cd provisions
+
+sudo chmod +x provision.sh
+
+sudo ./provision.sh
+
+cd ..
+
+cd app
+
+sudo npm install express
+
+sudo npm start
+```
 # AMI
+
 Amazon Machine Image
 
 if we create an image of an original instance, and reupload it when we want to use it again, then it would be cheaper to store it than to keep and maintain that machine instance (even if in hibernation), since storing it on AWS costs.
@@ -223,6 +261,8 @@ From the AWS site marketplace, you can also purchase images. Using an already se
 
 ![Cloud Deployment - AMI](https://user-images.githubusercontent.com/47668244/185961595-dcefa971-415a-4f68-9892-510ea5d03ef5.png)
 
+For every time you build an instance machine, EC2 saves all of the data with EBS (elastic block store). This EBS is what can be used to store and create AMIs.
+
 ### Steps to Imaging
 
 instances --> select instance --> actions --> images and templates --> create image
@@ -232,3 +272,5 @@ fill in details, then click Create Image to finish
 you can then find your image in the Images --> AMIs tab in AWS
 
 To start up your image, click Launch Image as Instance, and then follow through the steps as if you were launching a normal instnace.
+
+
