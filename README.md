@@ -156,7 +156,7 @@ Ubuntu Server 18.04 LTS (HVM), SSD Volume Type
 
 - instances
 
-- select -> connect -> SSH client; copy bottom SSH command `` paste it into the terminal, ensuring you are in your .ssh directory where your key pair that you've selected for that machine is stored.
+- select -> connect -> SSH connection; copy bottom SSH command `` paste it into the terminal, ensuring you are in your .ssh directory where your key pair that you've selected for that machine is stored.
 
 One issue that can arise with the ssh command is sometimes it brings up a root error. This is where your ssh command is using root instead of ubuntu (or whatever relevant os you're using). Replace the first with the second.
 
@@ -217,7 +217,7 @@ If you want to provision the instance with a specific script, you can do this, e
 To do it by file you must tick the box and enter the appropriate file path.
 
 ### Getting files
-You can git clone (this isn't secure), here's an example for our app machine;
+You can git clone (this isn't secure);
 ```
 #!bin/bash
 
@@ -308,5 +308,3 @@ Pre-Requisites:
 - aws configuration to secure
 the aws keys
 we python3.7 or above pip3
-
-
