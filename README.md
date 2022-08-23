@@ -277,6 +277,8 @@ To start up your image, click Launch Image as Instance, and then follow through 
 
 Accounting for any unexpected, unforseen scenarios, so that service is still delivered to the user.
 
+![AWS S3 Bucket](https://user-images.githubusercontent.com/47668244/186163276-ae20abd6-f1bb-4b95-bab2-edec96bf6b6d.png)
+
 Ensures deployment is:
 - highly available
 - scalable
