@@ -305,8 +305,160 @@ S3 is used as a data back-up. We need data accessible 24/7. If we store data to 
 
 we cannot use our ssh key connection to connect to an S3 bucket, we need aws secret & access keys.
 
+## Secret & Access Keys
+
+acquire keys (in excel format)
+
+encrypt keys in terminal: `aws configure` fille out the aws access key id and aws secret access key
+
+## Dependencies
+
 Pre-Requisites:
 - localhost and EC2 instance must be the same OS, so you need AWSCLI
 - aws configuration to secure
 the aws keys
 we python3.7 or above pip3
+
+firstly update and upgrade
+
+install python:
+`sudo apt-get install python -y`
+
+wrong version:
+`sudo apt install python3-pip`
+
+if after checking version (with `python --version`) and it's the wrong version, use: `alias python=python3`
+
+install AWS CLI on pip:
+`sudo pip3 install awscli`
+
+install pip:
+`sudo apt install python-pip`
+
+copy-paste access key
+copy-paste secret access key
+provide region (Ireland: eu-west-1)
+provide default output format (json)
+
+
+### Typical disaster recovery steps/plan
+
+follow the CRUD steps to carry out effective disaster recovery plan
+
+CRUD
+- create
+- read
+- update
+- delete
+
+get list of S3 buckets:
+
+`aws s3 ls ` list all available buckets
+
+`aws s3 mb s3://"s3 bucket name"` to create a bucket (remember in the naming conventions, s3 won't allow '_' so use '-')
+
+`aws s3 cp file "name" s3://"s3 bucket name"` to add files to your bucket
+
+everything on s3 is an object
+it creates a url (which clicked on will not )
+
+in S3 site (in AWS) you can set permissions for the entire bucket, to allow others to access files (or not): click on bucket --> click on object --> permissions --policy permissions --> edit --> allow all to read.
+
+`aws s3 cp s3://"bucket name"/"file" "destination directory"` how to copy stuff over from your bucket
+
+`aws s3 rb s3://"bucket-name" --force` to delete from s3 bucket
+
+
+## Boto3 With Python
+
+You can use python (with the boto module), to perform scripts on the terminal, just the same as if you were writing the commands on terminal.
+
+`pip3 install boto3`
+
+Install boto (will need pip already installed)
+
+`pip install boto3`
+
+Install Boto3 version 1.0 specifically
+
+`pip install boto3==1.0.0`
+
+Make sure Boto3 is no older than version 1.15.0
+
+`pip install boto3>=1.15.0`
+
+Avoid versions of Boto3 newer than version 1.15.3
+
+`pip install boto3<=1.15.3`
+
+create python file to write into: `touch "file name".py` then sudo nano into it, and begin writing.
+
+Then in the python executable, you can write your script...
+
+[Boto3 Guide](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html)
+
+
+#### Listing Buckets
+
+```
+import boto3
+
+# Let's use Amazon S3
+s3 = boto3.resource('s3')
+
+# Print out bucket names
+for bucket in s3.buckets.all():
+    print(bucket.name)
+```
+
+#### Creating a Bucket
+
+```
+import boto3
+
+# using s3
+s3 = boto3.resource('s3')
+
+# making a bucket
+s3.create_bucket(Bucket='mybucket', CreateBucketConfiguration={
+    'LocationConstraint': 'eu-west-1'})
+```
+
+#### Uploading Objects to S3
+
+```
+import boto3
+
+# using s3
+s3 = boto3.resource('s3')
+
+# Upload a new file
+data = open('test.jpg', 'rb')
+s3.Bucket('my-bucket').put_object(Key='test.jpg', Body=data)
+```
+
+#### Downloading Objects from S3
+
+```
+import boto3
+
+s3 = boto3.client('s3')
+s3.download_file('BUCKET_NAME', 'OBJECT_NAME', 'FILE_NAME')
+```
+
+#### Deleting Objects from Bucket
+```
+import boto3
+
+s3 = boto3.resource('s3')
+
+s3.Object('your-bucket', 'your-key').delete()
+```
+
+#### Deleting a Bucket
+```
+import boto3    
+s3 = boto3.resource('s3')
+bucket = s3.Bucket('my-bucket')
+bucket.delete()
+```
