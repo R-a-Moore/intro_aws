@@ -259,7 +259,7 @@ It also takes less time to duplicate the image and load it into multiple instanc
 
 From the AWS site marketplace, you can also purchase images. Using an already set up image of an instance, means that you save time having to set up a machine.
 
-![Cloud Deployment - AMI](https://user-images.githubusercontent.com/47668244/186136372-d134b0a0-3db5-4f3b-9157-8ebf0fad662f.png)
+![Cloud Deployment - AMI](https://user-images.githubusercontent.com/47668244/186138035-7bcded07-6b45-4a92-ad33-ed72d133b234.png)
 
 For every time you build an instance machine, EC2 saves all of the data with EBS (elastic block store). This EBS is what can be used to store and create AMIs.
 
