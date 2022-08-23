@@ -277,6 +277,8 @@ To start up your image, click Launch Image as Instance, and then follow through 
 
 Accounting for any unexpected, unforseen scenarios, so that service is still delivered to the user.
 
+be the disaster operational mishap or a breach in security
+
 ![AWS S3 Bucket](https://user-images.githubusercontent.com/47668244/186163276-ae20abd6-f1bb-4b95-bab2-edec96bf6b6d.png)
 
 Ensures deployment is:
@@ -296,7 +298,6 @@ for our hybrid cloud scenario, when working on disaster recovery, you will need 
 
 S3 (simple storage service):
 - highly flexible
-- cost effective
 - highly available (it's a global service)
 - durable (because it's highly available, it's a globally available service)
 - cost effective (no limits to data amount)
