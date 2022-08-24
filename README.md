@@ -288,9 +288,9 @@ Ensures deployment is:
 
 ### Levels of Back-Ups
 In case of any unexpected disaster - AMI - back up - eu-west-1 Ireland
-multi AZs eu-west-1a, 1b, 1c
-multi region Ireland as well as in London
-what if AWS goes down??? - multi cloud deployment AWS as well as Azure or GCP
+- multi AZs eu-west-1a, 1b, 1c
+- multi region Ireland as well as in London
+- what if AWS goes down??? - multi cloud deployment AWS as well as Azure or GCP
 
 By law in the UK fintech (financial technology), MUST be have multi cloud deployment.
 
